@@ -1,0 +1,71 @@
+nav{
+    background-color: rgb(255,255,255);
+}
+nav a{
+    color: black;
+}
+.under-border::after {
+    background: black;
+}
+.ds {
+    border-color: black;
+}
+.title{
+    font-family: 'montserrat',sans-serif;
+    font-size:450%;
+    font-weight: 600;
+    line-height: 0%;
+    margin: 15% 0% 0% 5%; 
+    padding: 0 0 1.5% 0;
+/*            border-bottom: solid black 7px;*/
+    width: 8ch;
+}
+.title h6{
+    font-size: 35%;
+    padding-top: 3%;
+    font-weight: 400;
+}
+.interestContent{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 10% 5% 10% 5%;
+    font-family: 'Montserrat',sans-serif;
+}
+.column{
+    width: 25%;
+    padding: 2% 2% 2% 2%
+}
+.columnText,
+.columnImage{
+    margin: 0%;
+}
+.columnText{
+    padding: 5% 0 7.5% 0;
+}
+.columnText h1{
+    font-weight: 600;
+    font-size: 250%;
+    margin: 5% 0% 25% 0%;
+    padding-bottom: 5%;
+    border-bottom: solid 3px rgba(0,0,0,1);
+}
+.columnText p{
+    font-size: 100%;
+    line-height: 150%;
+    text-align: justify;
+    display: none;
+}
+.column:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 35%;
+}
+.column:hover p{
+    font-size: 125%;
+}
+.column:hover h1{
+    font-size: 312.5%;
+}
+.column:hover .columnText p { 
+    display: block;
+}

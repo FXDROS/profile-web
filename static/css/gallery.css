@@ -1,0 +1,41 @@
+nav {
+    background-color: rgb(255, 255, 255);
+}
+
+nav a {
+    color: black;
+}
+
+.under-border::after {
+    background: black;
+}
+.ds {
+    border-color: black;
+}
+.title{
+    font-family: 'montserrat',sans-serif;
+    font-size:450%;
+    font-weight: 600;
+    line-height: 0%;
+    margin: 15% 0% 0% 5%; 
+    padding: 0 0 1.5% 0;
+/*            border-bottom: solid black 7px;*/
+}
+.title h6{
+    font-size: 35%;
+    padding-top: 3%;
+    font-weight: 400;
+}
+.galleryContainer{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 10% 5% 10% 5%;
+}
+.photos{
+    width: 30%;
+
+}
+.image{
+    padding: 1.5%;
+}

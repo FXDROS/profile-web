@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            about
+        </title>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Oxygen:400,500,600,700,800,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Yeseva+One:400,500,600,700,800,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/ProfileWeb.css')}}">
+        <style>
+            nav{
+                background-color: rgb(0,0,0);
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <div class="logo">
+                <a href="home" class="ds">DS</a>
+            </div>
+            <div class="menu">
+                <a href="about" class="under-border">About</a>
+                <a href="contact" class="under-border">Contact</a>
+                <a href="gallery" class="under-border">Gallery</a>
+            </div>
+        </nav>
+        <div class="about2">
+            <a href="hobbies">
+            <div class="hobby">
+                <div class="himage">
+                    <img src="{{url_for('static', filename='image/hobby.jpeg')}}" width="100%" height="100%">
+                    <div class="overlay"></div>
+                </div>
+                <div class="text">
+                    <div class="pretext">
+                        A way of wasting time,
+                    </div>
+                    <a href="hobbies">Hobby</a>
+                    <div class="textdesc">
+                        Everything I do in my<br>free or stressed time.
+                    </div>
+                </div>
+            </div>
+            </a>
+            <a href="interest">
+            <div class="interest">
+                <div class="iimage">
+                    <img src="{{url_for('static', filename='image/interest.jpeg')}}" width="100%" height="100%">
+                    <div class="overlay"></div>
+                </div>
+                <div class="text">
+                    <div class="pretext">
+                        Looking for passion,
+                    </div>
+                    <a href="interest">Interest</a>
+                    <div class="textdesc">
+                        Things that turn me on<br>everytime I see them.
+                    </div>
+                </div>
+            </div>
+            </a>
+            <a href="history">
+            <div class="history">
+                <div class="timage">
+                    <img src="{{url_for('static', filename='image/history.jpeg')}}" width="100%" height="100%">
+                    <div class="overlay"></div>
+                </div>
+                <div class="text">
+                    <div class="pretext">
+                        A story not to remember,
+                    </div>
+                    <a href="history">History</a>
+                    <div class="textdesc">
+                        All about my past,<br>some maybe shameful.
+                    </div>
+                </div>
+            </div>
+            </a>
+        </div>
+    </body>
+</html>

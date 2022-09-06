@@ -1,0 +1,238 @@
+body{
+    margin: 0;
+}
+:root {
+    --color1 : transparent;
+    --color2 : rgba(0,0,0,1);
+}
+nav{
+    width: 100%;
+    background-color: var(--color1);
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 0 2% 0;
+    transition: all 0.3s ease-out;
+    z-index: 10;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 180%;
+    font-family: 'Montserrat',sans-serif;
+    font-weight: 600;
+    position: relative;
+}
+.logo{
+    padding-left: 1.5%;
+}
+.menu{
+    display: flex;
+    min-width: 25%;
+    justify-content: space-between;
+    padding-right: 3%;
+}
+header{
+    background:linear-gradient(-45deg,rgb(252, 52, 152),rgb(232,106,240), rgb(30,187,215), rgb(0,210,127));
+    background-size: 400% 400%;
+    width: 100%;
+    height: 100vh;
+    animation: moving 10s ease-in-out;
+    animation-iteration-count: infinite;
+    z-index: 10;
+}
+.content{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.arrow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.arrow a{
+    position: absolute;
+    bottom: 5%;
+    animation: bouncing 2s;
+    animation-iteration-count: infinite;
+}
+.message{
+    font-family: 'Oxygen',sans-serif;
+    font-size: 600%;
+    font-weight: 700;
+    color: white;
+    border-right: 3px solid white;
+    animation: typing 3s steps(18);
+    overflow: hidden;
+    white-space: nowrap;
+    width: 18ch;
+}
+.under-border::after {
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: white;
+    position: absolute;
+    bottom: 0%; 
+    left: 50%;
+    border-radius: 10px;
+    transition: all 500ms ease;
+}
+.under-border:hover::after {
+    left: 0%;
+    width: 100%;
+}
+.ds{
+    border: 5px solid white;
+    font-family: 'Oxygen',sans-serif;
+    padding: 8px;
+    font-size: 250%;
+}
+#about{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+    font-family: 'Oxygen',sans-serif;
+    color: white;
+    background-color: black;
+    padding-top: 10%;
+    padding-bottom: 5%;
+    overflow: hidden;
+}
+#about p{
+    font-family: 'montserrat',sans-serif;
+    font-size: 125%;
+    line-height: 150%;
+}
+.aboutMessage {
+    border-left: solid white 6px;
+    padding: 0 10% 0 3%;
+    z-index: 1;
+}
+
+#about h1 {
+    font-size: 500%;
+    font-weight: 600;
+    padding-top: 10%;
+}
+.about2{
+    display: flex;
+    justify-content: center;
+    font-family: 'Montserrat',sans-serif;
+}
+.hobby,
+.interest,
+.history{
+    width: 100%;
+    border-bottom: rgb(102,102,102);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.interest{
+    border-right: solid 2px rgba(102,102,102);
+    border-left: solid 2px rgba(102,102,102);
+}
+.overlay{
+    background-color: rgba(0,0,0,0.7);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+.iimage,
+.himage,
+.timage{
+    opacity: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.interest:hover .iimage,
+.hobby:hover .himage,
+.history:hover .timage{
+    opacity: 1;
+    transition: 0.5s ease-in-out;
+    color: white;
+}
+
+.hobby:hover a,
+.interest:hover a,
+.history:hover a{
+    color: white;
+}
+.hobby:hover .textdesc,
+.interest:hover .textdesc,
+.history:hover .textdesc{
+    color: white;
+}
+
+.hobby:hover .pretext,
+.interest:hover .pretext,
+.history:hover .pretext{
+    opacity: 0;
+}
+
+.text{
+    position: absolute;
+    font-size: 400%;
+    font-weight: 500;
+}
+.text a{
+    color: black;
+    text-decoration: none;
+}
+.textdesc{
+    font-size: 25%;
+    color: rgba(0,0,0,0);
+    font-weight: 400;
+    text-align: center;
+    line-height: 150%;
+}
+.pretext{
+    font-size: 25%;
+    color: black;
+    font-weight: 400;
+    text-align: center;
+    line-height: 150%;
+}
+@keyframes moving {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+@keyframes typing {
+    0%{
+        width: 0ch;
+    }
+    100%{
+        width: 18ch;
+    }
+}
+@keyframes bouncing{
+    0%{
+        bottom: 5%;
+    }
+    50%{
+        bottom: 10%;
+    }
+    100%{
+        bottom: 5%
+    }
+}

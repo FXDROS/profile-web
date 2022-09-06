@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            contact
+        </title>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Oxygen:400,500,600,700,800,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Yeseva+One:400,500,600,700,800,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/ProfileWeb.css')}}">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/contact.css')}}">
+
+
+    </head>
+    <body>
+        <nav>
+            <div class="logo">
+                <a href="home" class="ds">DS</a>
+            </div>
+            <div class="menu">
+                <a href="about" class="under-border">About</a>
+                <a href="contact"class="under-border">Contact</a>
+                <a href="gallery" class="under-border">Gallery</a>
+            </div>
+        </nav>
+        <div class="title">
+            Contact
+            <h6>僕に連絡して</h6>
+        </div>
+        <div class="contactContent">
+            <form class="formContact" method = "POST", action="">
+                <div class="formInput">
+                    Name / 名前
+                    <br>
+                    <input class="formA" type="text" name="nama" placeholder="例）Dionisius Samudra" required>
+                </div>
+                <div class="formInput">
+                    Phone Number / 電話番号
+                    <br>
+                    <input class="formA" type="text" name="telpon" placeholder="例）08000000000" required>
+                </div>
+                <div class="formInput">
+                    Email Address / 電子メールアドレス
+                    <br>
+                    <input class="formA" type="text" name="email" placeholder="例）info@dionisiusamudra.com" required>
+                </div>
+                <div class="formInput">
+                    Message / メッセージ
+                    <br>
+                    <textarea class="formAX" type="text" name="pesan" placeholder="Write your message here..." required></textarea>
+                </div>
+                <div class="submission">
+                    <input type="submit" class="submitButton" value="send / refresh">
+                </div>
+            </form>
+            <div class="formComment">
+                Chat Room / トークルーム
+                <br>
+                <div class="showRoom">
+                    {%if result is defined and result|length != 0 %}
+                        {% for index in result %}
+                            <h5> {{ index[0] }} </h5>
+                            <p> {{ index[3] }} <p>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            about | interest
+        </title>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Oxygen:400,500,600,700,800,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Yeseva+One:400,500,600,700,800,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/ProfileWeb.css')}}">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/interest.css')}}">
+    </head>
+
+    <body>
+        <nav>
+            <div class="logo">
+                <a href="home" class="ds">DS</a>
+            </div>
+            <div class="menu">
+                <a href="about" class="under-border">About</a>
+                <a href="contact" class="under-border">Contact</a>
+                <a href="gallery" class="under-border">Gallery</a>
+            </div>
+        </nav>
+        <div class="title">
+            Interest
+            <h6>僕の興味について</h6>
+        </div>
+        <div class="interestContent">
+            <div class="column">
+                <div class="columnImage">
+                    <img src="{{url_for('static', filename='image/tokyo.jpeg')}}" width="100%">
+                </div>
+                <div class="columnText">
+                    <h1 style="width: 8ch;">Japanese</h1>
+                    <p>I really love Japanese culture. Not only about their heritage,
+                        traditional clothing, and stuffs but more likely about their
+                        behaviour, their habbits, and their earnest. Even at the most 
+                        crowded place in Japan, I still feel safe as if I don't need
+                        to be insecure. I've learned Japanese language since thirteen.
+                        It was my second non alphabetic language that I learn after 
+                        Chinese. Well, honestly I started to know about Japan from
+                        anime that I watched on television.
+                    </p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="columnImage">
+                    <img src="{{url_for('static', filename='image/camera.jpeg')}}" width="100%">
+                </div>
+                <div class="columnText">
+                    <h1 style="width: 11ch;">Photography</h1>
+                    <p>
+                        At first I thought that photography is not my thing. But turns out,
+                        I fall in love with it. My father always bring his camera whenever
+                        we travel together. He takes lots of photos, and I was amazed by
+                        the beauty of his visuals. I want to be like him. So that one day,
+                        when we were on vacation, I borrowed his camera and tried to take
+                        some pictures. He taught me some basic techniques that I developed
+                        through times. In the end, I become their photographer when we are 
+                        on vacation.
+                    </p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="columnImage">
+                    <img src="{{url_for('static', filename='image/music.jpeg')}}" width="100%">
+                </div>
+                <div class="columnText">
+                    <h1 style="width: 5ch;">Music</h1>
+                    <p>I started play my first instrument when I was five. At first,
+                        my sister taught me how to play piano, starting from simple songs
+                        such as songs that you often hear when you were a toddler. 
+                        Since that time, I started to enjoy not only listening to music,
+                        but also playing it. I love some genres, but some don't. When people
+                        enjoy pop and edm the most in these days, I still enjoy jazz
+                        and classical musics. For me, every song, every music have their own
+                        emotions. They have their own meaning based on the song writer's mood
+                        and emotions that time.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            home
+        </title>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Oxygen:400,500,600,700,800,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Yeseva+One:400,500,600,700,800,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/ProfileWeb.css')}}">
+    </head>
+
+    <body>
+        <nav>
+            <div class="logo">
+                <a href="#header" class="ds">DS</a>
+            </div>
+            <div class="menu">
+                <a href="about" class="under-border">About</a>
+                <a href="contact" class="under-border">Contact</a>
+                <a href="gallery" class="under-border">Gallery</a>
+            </div>
+        </nav>
+        <header>
+            <div class="content">
+                <div class="message">
+                    You Know Who I Am.
+                </div>
+            </div>
+            <div class="arrow">
+                <a href="#about"><img src="https://img.icons8.com/ios-filled/96/000000/double-down.png" style="width: 100%;"></a>
+            </div>
+        </header>
+        <div id="about">
+            <div style="padding: 5% 0 5% 5%; width: 130%; z-index: 1; border-top: solid white 6px; margin-right: 5%;">
+                <img src="{{url_for('static', filename='image/Profile Photo.001.jpeg')}}" width="100%" height="100%" >
+            </div>
+            <div class="aboutMessage">
+                <img src="{{url_for('static', filename='image/Slide1.jpeg')}}" style="width: 55%; position:absolute; right: 0%; margin-top: -10%;">
+                <h1>Hi There!</h1>
+                <p>I'm Dionisius Baskoro Samudra, a student in University of Indonesia.
+                    I'm currently pursuing bachelor degree in computer science major.
+                    There are lots of stuffs that become my interest, such as Japanese culture, 
+                    computers, video games, and others. One of my favorite sport is Uni Hockey.
+                    To know more about me, why don't you explore this webpage on your own?
+                    Cheers!
+                </p>
+            </div>
+        </div>
+        
+
+
+        <script>
+            "use strict";
+            
+            const headerTag = document.querySelector('header');
+            const myNav = document.querySelector('nav');
+
+            let scrolled = () => {
+                let dec = scrollY / headerTag.scrollHeight;
+                return Math.floor(dec * 100);
+            }
+
+            addEventListener('scroll',() => {
+                myNav.style.setProperty('background',scrolled() > 25 ? "var(--color2)" : "var(--color1)");
+            })
+
+            function smoothScroll(target, duration){
+                var target = document.querySelector(target);
+                var targetPosition = target.getBoundingClientRect().top;
+                var startPosition = window.pageYOffset;
+                var distance = targetPosition - startPosition;
+                var startTime = null;
+
+                function animation (currentTime) {
+                    if(startTime == null ) startTime = currentTime;
+                    var timeElapsed = currentTime - startTime;
+                    var run = ease(timeElapsed, startPosition, distance, duration);
+                    window.scrollTo(0,run);
+                    if(timeElapsed < duration) requestAnimationFrame(animation);
+
+                }
+
+                function ease (t, b, c, d) {
+                    t /= d / 2;
+                    if (t < 1 ) return c / 2 * t * t + b;
+                    t--;
+                    return -c / 2 * (t * (t - 2) - 1) + b;
+                }
+                requestAnimationFrame(animation);
+            }
+
+            var arrow = document.querySelector('.arrow');
+            var ds = document.querySelector('.ds');
+            var about = document.querySelector('.about');
+            arrow.addEventListener('click',function(){
+                smoothScroll('#about', 1500); 
+            })
+            ds.addEventListener('click',function(){
+                smoothScroll('header',1500);
+            })
+
+        </script>
+    </body>
+</html>

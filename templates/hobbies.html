@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            about | hobbies
+        </title>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Oxygen:400,500,600,700,800,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Yeseva+One:400,500,600,700,800,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/ProfileWeb.css')}}">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/hobbies.css')}}">
+    </head>
+
+    <body>
+        <nav>
+            <div class="logo">
+                <a href="home" class="ds">DS</a>
+            </div>
+            <div class="menu">
+                <a href="about" class="under-border">About</a>
+                <a href="contact" class="under-border">Contact</a>
+                <a href="gallery" class="under-border">Gallery</a>
+            </div>
+        </nav>
+        <div class="title">
+            Hobbies
+            <h6>僕の趣味のすべて</h6>
+        </div>
+        <div class="row">
+            <div class="columnleft">
+                <img src="{{url_for('static', filename='image/book.jpeg')}}" width="100%" height="100%">
+            </div>
+            <div class="columnright">
+                <h1>
+                    Reading
+                </h1>
+                <p>
+                    I would like being honest that, I could be one of those people
+                    who hate to read books. I only read text books for study purpose,
+                    nothing less nothing more. Yes, it was really boring to read 
+                    those realistic and factual stuffs. Maybe, that's why I hate to read
+                    at that time. But one day, one of my friends persuaded me to read
+                    fictional books everyday and I eventually give up. I didn't resist
+                    and took a book from the bookshelf. I sit down, read the first
+                    page and didn't even move until I finished it.
+                </p>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 6%;">
+            <div class="columnright" style="text-align: right;">
+                <h1>
+                    Games
+                </h1>
+                <p>
+                    No game no life. Yes  I know, it's a title of an anime opening song.
+                    But, I suppose, it really make sense. This life is full of games.
+                    Even you can play with politics haha. Well, let's not discuss that
+                    part. I do remember my first gaming console is Gameboy Advance by
+                    Nintendo. My father gave it to me when I was four. Well, it was really
+                    satisfying to play in such low screen resolution that day. But now,
+                    we have 4K graphics that makes gaming to the next level, not forget to
+                    mention those triple As games. One of my favorite is Assassin's Creed Syndicate. 
+                </p>
+            </div>
+            <div class="columnleft">
+                <img src="{{url_for('static', filename='image/game.jpeg')}}" width="100%" height="100%">
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 5%; margin-top: 6%;">
+            <div class="columnleft">
+                <img src="{{url_for('static', filename='image/gundam.jpeg')}}" width="100%" height="100%">
+            </div>
+            <div class="columnright">
+                <h1>
+                    Action Figure
+                </h1>
+                <p>
+                    Kids play with toys, but grown ups play with acion figures.
+                    Well, I should admit that they are pretty similar. But, the things
+                    that I would like to mention here are no other than Gundam. Well, 
+                    at first me, myself not really into it. I don't really know and I don't
+                    really care. But this one anime called Little Battlers eXperiece (LBX) 
+                    "hypnotized" me. I started to buy some of the model kits. Until one day, 
+                    when I've collected lots of it, I started to think "should I try to assemble a
+                    Gundam next time?" Well, it was a horrible decision because now I can't get
+                    myself away from it. Yes, it is seriously addicting.
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
